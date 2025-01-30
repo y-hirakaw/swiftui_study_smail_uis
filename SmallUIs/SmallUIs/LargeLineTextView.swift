@@ -16,7 +16,8 @@ struct LargeLineTextView: View {
     var body: some View {
         LazyVStack(alignment: .leading, spacing: 0) {
             ForEach(Array(lines.enumerated()), id: \.offset) { _, line in
-                Text(line)
+                // verbatimの方がローカライズの処理が入らないため少し軽くなる
+                Text(verbatim: line)
             }
         }
     }
