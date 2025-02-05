@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		669B9A7F2D537FBE00E16DD0 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 669B9A7E2D537FBE00E16DD0 /* Inject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		66810CF02D49125D00DD5C5C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				669B9A7F2D537FBE00E16DD0 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 				66810CE12D49125C00DD5C5C /* SmallUIs */,
 				66810CF22D49125D00DD5C5C /* SmallUIsTests */,
 				66810CFC2D49125D00DD5C5C /* SmallUIsUITests */,
+				669B9A7D2D537FBE00E16DD0 /* Frameworks */,
 				66810CE02D49125C00DD5C5C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +96,13 @@
 				66810CF92D49125D00DD5C5C /* SmallUIsUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		669B9A7D2D537FBE00E16DD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +125,7 @@
 			);
 			name = SmallUIs;
 			packageProductDependencies = (
+				669B9A7E2D537FBE00E16DD0 /* Inject */,
 			);
 			productName = SmallUIs;
 			productReference = 66810CDF2D49125C00DD5C5C /* SmallUIs.app */;
@@ -195,6 +209,9 @@
 			);
 			mainGroup = 66810CD62D49125C00DD5C5C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				669B9A7C2D537E9300E16DD0 /* XCRemoteSwiftPackageReference "Inject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 66810CE02D49125C00DD5C5C /* Products */;
 			projectDirPath = "";
@@ -409,6 +426,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hiray.SmallUIs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -438,6 +459,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hiray.SmallUIs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -558,6 +580,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		669B9A7C2D537E9300E16DD0 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		669B9A7E2D537FBE00E16DD0 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 669B9A7C2D537E9300E16DD0 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 66810CD72D49125C00DD5C5C /* Project object */;
 }
